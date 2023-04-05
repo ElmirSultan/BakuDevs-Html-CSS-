@@ -1,0 +1,523 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+:root {
+  --desktop_breakpoint: 1240px;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+header {
+  display: flex;
+  justify-content: center;
+  margin-top: 38px;
+}
+header nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  max-width: var(--desktop_breakpoint);
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+header nav button{
+  background-color: inherit;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  transition: all .5s ease;
+  border: 1px solid #34786d8a ;
+  display: none;
+  cursor: pointer;
+}
+header nav button:hover{
+  box-shadow: 0px 0px 15px #008d96;
+}
+.kurslar:hover .dropdown{
+  display: flex;
+  flex-direction: column;
+}
+.kurslar .dropdown{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: absolute;
+  background-color: #F9F5EE;
+  width: 200px;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  display: none;
+  z-index: 3;
+
+}
+.kurslar .dropdown a{
+  color: #000;
+  text-decoration: none;
+  transition: all .5s ease;
+  position: relative;
+  display: inline-block;
+}
+.kurslar .dropdown a::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width .3s ease-out;
+}
+
+.kurslar a:hover::after,
+.kurslar a:focus:after {
+   width: 100%;
+
+}
+.kurslar {
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.kurslar img {
+  padding-right: 1rem;
+}
+.istek {
+  font-weight: 700;
+  color: #008d96;
+  font-size: 20px;
+  line-height: 20px;
+}
+.istek img {
+  padding-right: 1rem;
+}
+.linkler {
+  display: flex;
+  gap: 11px;
+}
+.daxilol {
+  padding: 12px 20px;
+  border: 1px solid #008d96;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #008d96;
+}
+.qeydiyyat {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+  background-color: #008d96;
+}
+.thefirstcontanier {
+  background-image: url(./assets/svgs/background.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.thefirst {
+  max-width: var(--desktop_breakpoint);
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.thefirst .box-container {
+  display: flex;
+}
+
+.thefirst .box-container .left-side {
+  flex-basis: 50%;
+}
+.thefirst .box-container .right-side {
+  flex: 1;
+}
+.thefirst .box-container .left-side h1 span {
+  color: #f5af15;
+  font-size: 56px;
+  font-weight: 600;
+}
+.thefirst .box-container .left-side h1 {
+  font-size: 56px;
+  font-weight: 600;
+  color: #1b2221;
+}
+.thefirst .box-container .left-side button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+  color: #fff;
+  background-color: #008d96;
+  border: none;
+  border-radius: 70px;
+  padding: 15px 30px;
+  cursor: pointer;
+}
+.populyarkurslar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+  padding: 0 2rem;
+}
+.populyarkurslar .content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--desktop_breakpoint);
+}
+.populyarkurslar .content h1 {
+  font-size: 41px;
+  font-weight: 600;
+}
+.populyarkurslar .content .butonlar {
+  display: flex;
+  gap: 20px;
+}
+.populyarkurslar .content button {
+  border: #008d96;
+  padding: 9px 30px;
+  border-radius: 8px;
+}
+.populyarkurslar .content .aktiv {
+  color: #fff;
+  background-color: #008d96;
+}
+.populyarkurslar .row {
+    margin-top: 1rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1240px;
+}
+.populyarkurslar .row .box {
+  display: flex;
+  height: 361px;
+  max-width: 300px;
+  flex-direction: column;
+  box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.09);
+  padding: 1rem;
+  border-radius: 20px;
+}
+.populyarkurslar .row .box .top-side{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center ;
+}
+.populyarkurslar .row .box .top-side img{
+  width: 100%;
+}
+
+.populyarkurslar .row .box .melumat {
+  display: flex;
+  margin-top: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 1rem;
+}
+.populyarkurslar .row .box .melumat p {
+  font-size: 16px;
+  margin: 0;
+  font-weight: 600;
+  padding: 6px 11px;
+  background: #f5af15;
+  border-radius: 8px;
+}
+.populyarkurslar .row .box .melumat .ders {
+  display: flex;
+  align-items: center;
+}
+.populyarkurslar .row .box .melumat .ders img {
+  margin-right: 0.5rem;
+  width: 20px;
+}
+.populyarkurslar .row .box .bottom-side {
+  display: flex;
+  justify-content: space-between;
+}
+.populyarkurslar .row .box .bottom-side .right img {
+  padding: 1rem;
+  background-color: #008d96;
+  border-radius: 50%;
+}
+.populyarkurslar a{
+    background-color: #008d96;
+    padding: 15px 40px;
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin-top: 5rem;
+    border-radius: 70px;
+}
+
+.bakudevs{
+  background-color: #E3F1F2;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    text-align: left;
+    padding-bottom: 8rem;
+    padding: 0 2rem;
+}
+.bakudevs h1{
+  font-size: 41px;
+}
+.bakudevs .bakudevss{
+  max-width: var(--desktop_breakpoint);
+  width: 100%;
+  margin-top: 138px;
+}
+.bakudevs .box-container{
+    display: flex;
+
+}
+.bakudevs .box-container .boxes{
+    display: flex;
+    flex-basis: 50%;
+    gap: 1rem;
+}
+.bakudevs .box-container .boxes .box{
+    box-shadow: 3px 7px 30px rgba(1, 94, 100, 0.15);
+    display: flex;
+    border-radius: 30px;
+    background-color: #fff;
+    padding: 1rem;
+    min-width: 250px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.bakudevs .box-container .boxes .box img{
+    padding: 2rem;
+    margin-bottom: 15px;
+    background-color: #008d96;
+    border-radius: 14px;
+}
+.bakudevs .box-container .firstcolumn{
+  display: flex;
+  flex-direction: column;
+gap: 26px;
+}
+.bakudevs .box-container .boxes .right-side{
+  display: flex;
+  margin-top: 26px;
+  flex-direction: column;
+gap: 26px;
+}
+.bakudevs .box-container .photo{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+.bakudevs .box-container .photo .photouser{
+  display: flex;
+  z-index: 2;
+  position: relative; 
+  border-radius: 50%;
+  background-color: #C4C4C4;
+  justify-content: center;
+}
+.bakudevs .box-container .photo .photouser .circle{
+  position: absolute;
+  bottom: 50px;
+  left: 30px;
+}
+.bakudevs .box-container .photo .photouser .yellowcircle{
+  position: absolute;
+  top: 50px;
+  right: 60px;
+}
+.bakudevs .box-container .photo .photouser .cloud{
+  position: absolute;
+  top: 50px;
+  left: 12px;
+}
+.bakudevs .box-container .photo .photouser .dots{
+  position: absolute;
+  top: 80px;
+  left: 30px;
+}
+.bakudevs .box-container .photo .photouser .person{
+  border-radius: 50%;
+  overflow: hidden;
+  padding:25px 71px 0rem 58px;
+}
+footer{
+ background: url(./assets/svgs/footer.svg);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px 50px 0 50px;
+
+}
+footer .firstline{
+  max-width: 300px;
+}
+footer .footer{
+  max-width: var(--desktop_breakpoint);
+  display: flex;
+  gap: 100px;
+  justify-content: space-between;
+  margin: 0 auto;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 30px;
+}
+footer .footer ul li{
+  font-size: 20px;
+}
+.middleline{
+  display: flex;
+  gap: 80px;
+}
+footer .lastline{
+  display: flex;
+  flex-direction: column;
+}
+footer .lastline p{
+  font-size: 20px;
+}
+footer .lastline p a{
+  font-weight: 700;
+  color: #fff;
+}
+footer .lastline .input{
+  background-color: #fff;
+  display: flex;
+  overflow-x: hidden;
+  border-radius: 60px;
+  justify-content: space-between;
+}
+footer .lastline .input input{
+  outline: none;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+}
+footer .lastline button{
+  border: none;
+  border-radius: 60px;
+  font-size: 20px;
+  padding: 0 2rem;
+  background-color: #F5AF15;
+  color: #fff;
+}
+footer .copyright{
+  display: flex;
+  padding: 0rem 0 1rem 0;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 100%;
+  max-width: var(--desktop_breakpoint);
+}
+footer .copyright p{
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+@media(max-width:1345px){
+  footer .footer{
+    width: 100%;
+  }
+  footer .footer .middleline{
+    display: none;
+  }
+}
+@media(max-width:1230px){
+  .populyarkurslar .row{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .populyarkurslar .content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+@media(max-width:1040px){
+  .bakudevs .bakudevss .box-container{
+    display: flex;
+    justify-content: center;
+  }
+  .bakudevs .bakudevss .box-container .photo{
+     display: none;
+  }
+
+}
+@media(max-width:1030px){
+  header nav .kurslar, .istek, .linkler{
+    display: none;
+  }
+  header nav button{
+    display: block;
+  }
+  .thefirst{
+    margin-top: 3rem;
+  }
+  .thefirst .box-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 auto;
+  }
+
+}
+@media(max-width:868px){
+  footer .footer{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  footer .footer .middleline{
+    display: none;
+  }
+}
+@media(max-width:768px){
+   .thefirst .box-container .left-side h1{
+    font-size: 1.6rem;
+   }
+   .thefirst .box-container .left-side button{
+  font-size: 15px;
+  padding: 5px 10px;
+   }
+   .thefirst .box-container .left-side h1 span{
+    font-size: 2rem;
+   }
+   .thefirst .box-container .right-side img{
+    width: 80%;
+   }
+
+   .populyarkurslar .content button{
+      padding: 5px 15px;
+  }
+
+  .bakudevs .bakudevss .box-container .boxes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
